@@ -27,6 +27,19 @@ gem "mongoid", "~> 4.0.0"
 # C extensions to accelerate the Ruby BSON serialization
 gem 'bson_ext'
 
+gem 'mongoid-versioning', github: 'simi/mongoid-versioning'
+
+
+#Devise for authentication
+gem 'devise'
+
+gem 'simple_form'
+
+
+
+gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'twitter-bootstrap-rails'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
