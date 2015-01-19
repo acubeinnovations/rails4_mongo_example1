@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+	before_filter :deny_to_visitors
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -71,4 +72,8 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description)
     end
+		def deny_to_visitors
+			redirect_to new_user_session_path unless user_signed_in?
+		end
+
 end

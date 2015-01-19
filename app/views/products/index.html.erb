@@ -22,6 +22,8 @@
         <td><%= product.description %></td>
         <td><%=l product.created_at %></td>
         <td>
+          <%= link_to t('.view', :default => t("helpers.links.view")),
+                      product_path(product), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_product_path(product), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
